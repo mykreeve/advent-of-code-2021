@@ -9,7 +9,7 @@ lanternfish_initials = [0, 1, 2, 3, 4, 5, 6]
 lanternfish_after80 = {}
 lanternfish_after256 = {}
 
-
+now = datetime.now()
 def lanternfish_generation(input):
     output = []
     for i in input:
@@ -36,9 +36,12 @@ total_fish = 0
 for item in f:
     total_fish += lanternfish_after80[int(item)]
 
-print(total_fish)
+done = datetime.now()
+print("Answer to part 1:", total_fish)
+print("Time taken:", done - now)
 
 
+now = datetime.now()
 def improved_lanternfish_generation(input):
     output = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0}
     for i in input:
@@ -65,4 +68,6 @@ total_fish = 0
 for item in f:
     total_fish += lanternfish_after256[int(item)]
 
-print(total_fish)
+done = datetime.now()
+print("Answer to part 2:", total_fish)
+print("Time taken:", done - now)

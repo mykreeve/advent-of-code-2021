@@ -8,6 +8,7 @@ file = file.readlines()
 bingo_numbers = None
 bingo_boards = []
 
+now = datetime.now()
 curr_board = []
 for index, f in enumerate(file):
 	if index == 0:
@@ -64,9 +65,12 @@ for row in range(len(eval_boards[win_board])):
 
 score *= int(last_number)
 
-print (score)
+done = datetime.now()
+print("Answer to part 1:", score)
+print("Time taken:", done - now)
 
 
+now = datetime.now()
 eval_boards = copy.deepcopy(bingo_boards)
 
 found = False
@@ -96,4 +100,6 @@ for row in range(len(eval_boards[0])):
 
 score *= int(last_number)
 
-print (score)
+done = datetime.now()
+print("Answer to part 2:", score)
+print("Time taken:", done - now)

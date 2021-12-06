@@ -8,6 +8,7 @@ file = file.readlines()
 pipes = []
 grid = {}
 
+now = datetime.now()
 for f in file:
     line = f.replace('\n', '').replace(' -> ', ',').split(',')
     pipe = ((int(line[0]), int(line[1])), ((int(line[2]), int(line[3]))))
@@ -49,6 +50,12 @@ for l in grid:
     if grid[l] > 1:
         count += 1
 
+done = datetime.now()
+print("Answer to part 1:", count)
+print("Time taken:", done - now)
+
+
+now = datetime.now()
 print(count)
 
 grid = {}
@@ -92,4 +99,6 @@ for l in grid:
     if grid[l] > 1:
         count += 1
 
-print(count)
+done = datetime.now()
+print("Answer to part 2:", count)
+print("Time taken:", done - now)
