@@ -19,6 +19,7 @@ import math
 # .    f  e    f  .    f  e    f  .    f
 #  gggg    gggg    ....    gggg    gggg
 
+now = datetime.now()
 
 numbers_lookup = {
     0: ['b', 'bl', 'br', 't', 'tl', 'tr'],
@@ -51,7 +52,11 @@ for d in displays:
         if len(c) in [2, 3, 4, 7]:
             count += 1
 
-print(count)
+done = datetime.now()
+print("Answer to part 2:", count)
+print("Time taken:", done - now)
+
+now = datetime.now()
 
 score = 0
 
@@ -106,4 +111,6 @@ for d in displays:
                 num = num + str(n)
     score += (int(num))
 
-print (score)
+done = datetime.now()
+print("Answer to part 2:", score)
+print("Time taken:", done - now)
