@@ -1,6 +1,5 @@
 from datetime import datetime
 import math
-import time
 import itertools
 
 filename = "input/day18input.txt"
